@@ -1,0 +1,79 @@
+<style>
+.mode-landscape .sl-layout { flex-direction: row; }
+.mode-portrait .sl-layout { flex-direction: column; }
+.mode-landscape .sl-content { width: 55%; }
+.mode-landscape .sl-visual { width: 45%; }
+.mode-portrait .sl-content { width: 100%; flex: 1; }
+.mode-portrait .sl-visual { width: 100%; height: 40%; }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- Content column -->
+    <div class="sl-content flex flex-col justify-between p-12 bg-white">
+      <div>
+        <span class="inline-block bg-teal-50 text-teal-700 text-xs font-semibold tracking-widest uppercase px-3 py-1.5 rounded-full mb-8">Pharmacy Operations Platform</span>
+        <h1 class="text-5xl font-black text-slate-900 leading-none mb-6">
+          Never Lose<br>
+          <span class="text-teal-600">a Drug</span><br>
+          to Expiry Again.
+        </h1>
+        <p class="text-base text-slate-500 leading-relaxed max-w-xs">
+          Complete inventory control, live expiry alerts, and locked prescription records — purpose-built for pharmacy owners.
+        </p>
+      </div>
+
+      <div>
+        <div class="flex gap-8 mb-8">
+          <div>
+            <div class="text-2xl font-black text-teal-700">0%</div>
+            <div class="text-xs text-slate-400 mt-0.5 leading-tight">Expired stock<br>target</div>
+          </div>
+          <div class="w-px bg-slate-200"></div>
+          <div>
+            <div class="text-2xl font-black text-teal-700">100%</div>
+            <div class="text-xs text-slate-400 mt-0.5 leading-tight">Prescription<br>accuracy</div>
+          </div>
+          <div class="w-px bg-slate-200"></div>
+          <div>
+            <div class="text-2xl font-black text-teal-700">Live</div>
+            <div class="text-xs text-slate-400 mt-0.5 leading-tight">Expiry<br>monitoring</div>
+          </div>
+        </div>
+        <data-attribution />
+      </div>
+    </div>
+
+    <!-- Visual column -->
+    <div class="sl-visual relative overflow-hidden bg-teal-800">
+      <img
+        src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=modern%20clean%20pharmacy%20interior%20with%20neatly%20organised%20medicine%20shelves%2C%20professional%20clinical%20lighting%2C%20teal%20and%20white%20colour%20palette%2C%20editorial%20photography%2C%20high%20resolution"
+        alt="Pharmacy interior"
+        class="w-full h-full object-cover opacity-75"
+      />
+      <div class="absolute inset-0 bg-gradient-to-l from-transparent to-teal-900/30"></div>
+
+      <!-- Floating badge -->
+      <div class="absolute bottom-10 left-8 right-8">
+        <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-5">
+          <div class="text-white/60 text-xs font-semibold uppercase tracking-widest mb-3">What gets prevented</div>
+          <div class="flex gap-4">
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-rose-400"></div>
+              <span class="text-white text-xs">Expired write-offs</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
+              <span class="text-white text-xs">Rx errors</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 rounded-full bg-amber-400"></div>
+              <span class="text-white text-xs">Stock blindspots</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
