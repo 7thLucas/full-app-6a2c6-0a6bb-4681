@@ -1,0 +1,85 @@
+<style>
+.mode-landscape .sl-metrics { grid-template-columns: repeat(2, 1fr); }
+.mode-portrait .sl-metrics { grid-template-columns: repeat(1, 1fr); }
+.mode-landscape .sl-main { flex-direction: row; gap: 1.5rem; }
+.mode-portrait .sl-main { flex-direction: column; gap: 1.5rem; }
+.mode-landscape .sl-roi { width: 14rem; flex-shrink: 0; }
+.mode-portrait .sl-roi { width: 100%; }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="h-full flex flex-col p-12">
+
+    <!-- Header -->
+    <div class="mb-7">
+      <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">Why It Matters</span>
+      <h2 class="text-3xl font-black text-slate-900 mt-1">The Business Impact</h2>
+    </div>
+
+    <div class="sl-main flex flex-1">
+
+      <!-- Metric cards -->
+      <div class="flex-1">
+        <div class="sl-metrics grid gap-4 h-full">
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+            <div class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Inventory Protection</div>
+            <div class="text-4xl font-black text-teal-700 mb-2">↓ ~90%</div>
+            <p class="text-xs text-slate-500 leading-relaxed">Reduction in expired stock write-offs through automated expiry monitoring and timely removal alerts.</p>
+            <div class="mt-3 text-xs text-slate-400 italic">Estimated — varies by current process</div>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+            <div class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Prescription Accuracy</div>
+            <div class="text-4xl font-black text-teal-700 mb-2">100%</div>
+            <p class="text-xs text-slate-500 leading-relaxed">Every prescription logged, verified, and searchable — zero ambiguous or lost records.</p>
+            <div class="mt-3 text-xs text-slate-400 italic">Target — by design</div>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+            <div class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Time Reclaimed</div>
+            <div class="text-4xl font-black text-teal-700 mb-2">~8 hrs</div>
+            <p class="text-xs text-slate-500 leading-relaxed">Hours saved each week from manual stock reconciliation, paper prescription searches, and spreadsheet upkeep.</p>
+            <div class="mt-3 text-xs text-slate-400 italic">Estimated per week per location</div>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col justify-between">
+            <div class="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-3">Compliance Readiness</div>
+            <div class="text-4xl font-black text-teal-700 mb-2">Instant</div>
+            <p class="text-xs text-slate-500 leading-relaxed">Full audit trail on demand — every inventory move and prescription action timestamped and searchable at any time.</p>
+            <div class="mt-3 text-xs text-slate-400 italic">Always on — by default</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ROI Summary panel -->
+      <div class="sl-roi bg-teal-700 rounded-xl p-6 flex flex-col justify-between">
+        <div>
+          <div class="text-teal-300 text-xs font-semibold uppercase tracking-widest mb-3">Operator Outcome</div>
+          <p class="text-white text-sm leading-relaxed">
+            Less expired write-off. Fewer prescription errors. Less manual admin. More time for patients and growing the business.
+          </p>
+        </div>
+        <div class="space-y-4 mt-6">
+          <div class="border-t border-teal-600 pt-4">
+            <div class="text-teal-300 text-xs mb-1">Stock loss prevented</div>
+            <div class="text-white font-bold text-base">Every month, ongoing</div>
+          </div>
+          <div class="border-t border-teal-600 pt-4">
+            <div class="text-teal-300 text-xs mb-1">Liability exposure</div>
+            <div class="text-white font-bold text-base">Materially reduced</div>
+          </div>
+          <div class="border-t border-teal-600 pt-4">
+            <div class="text-teal-300 text-xs mb-1">Regulatory readiness</div>
+            <div class="text-white font-bold text-base">Always on</div>
+          </div>
+          <div class="border-t border-teal-600 pt-4">
+            <div class="text-teal-300 text-xs mb-1">Time saved (staff)</div>
+            <div class="text-white font-bold text-base">~8 hrs / week</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
