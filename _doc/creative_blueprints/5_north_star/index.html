@@ -1,0 +1,123 @@
+<style>
+.mode-landscape .sl-body { flex-direction: row; gap: 2rem; }
+.mode-portrait .sl-body { flex-direction: column; gap: 1.5rem; }
+.mode-landscape .sl-left { width: 55%; }
+.mode-landscape .sl-right { width: 45%; }
+.mode-portrait .sl-left { width: 100%; }
+.mode-portrait .sl-right { width: 100%; }
+</style>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="h-full flex flex-col p-12">
+
+    <!-- Header -->
+    <div class="mb-6">
+      <span class="text-xs font-semibold text-slate-400 uppercase tracking-widest">North Star Metric</span>
+      <h2 class="text-3xl font-black text-slate-900 mt-1">Weekly Verified Operations</h2>
+      <p class="text-sm text-slate-500 mt-1.5">The two domain events this app exists to perform — completed by a real user in the live app, every week.</p>
+    </div>
+
+    <div class="sl-body flex flex-1">
+
+      <!-- Left: operations + formula -->
+      <div class="sl-left flex flex-col gap-4">
+
+        <!-- Verified operation chips -->
+        <div class="flex gap-2 flex-wrap">
+          <span class="inline-flex items-center gap-1.5 bg-teal-700 text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            Prescription Verified
+          </span>
+          <span class="inline-flex items-center gap-1.5 bg-teal-700 text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            Expiry Batch Checked
+          </span>
+        </div>
+
+        <!-- WVO formula block -->
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 flex-1">
+          <div class="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-4">WVO Formula</div>
+
+          <div class="space-y-3 mb-5">
+            <!-- Rx line -->
+            <div class="flex items-start gap-2">
+              <div class="w-2 h-2 rounded-full bg-teal-500 mt-1.5 flex-shrink-0"></div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="text-xs text-slate-700 font-medium">Prescriptions verified:</span>
+                  <span class="bg-amber-100 text-amber-700 text-xs font-semibold px-2 py-0.5 rounded-md">Assumption — adjust this</span>
+                </div>
+                <div class="text-sm text-slate-800 font-semibold mt-1">25 Rx/day × 6 days = <span class="text-teal-700">150 prescriptions/week</span></div>
+              </div>
+            </div>
+            <!-- Batch line -->
+            <div class="flex items-start gap-2">
+              <div class="w-2 h-2 rounded-full bg-teal-500 mt-1.5 flex-shrink-0"></div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="text-xs text-slate-700 font-medium">Expiry batches checked:</span>
+                  <span class="bg-amber-100 text-amber-700 text-xs font-semibold px-2 py-0.5 rounded-md">Assumption — adjust this</span>
+                </div>
+                <div class="text-sm text-slate-800 font-semibold mt-1"><span class="text-teal-700">15 batch checks/week</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border-t border-slate-200 pt-4">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-bold text-slate-700">Total WVO / week</span>
+              <span class="text-2xl font-black text-teal-700">165</span>
+            </div>
+            <div class="text-xs text-slate-400 mt-1">150 prescriptions + 15 batch checks</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: value derivation + annual figure -->
+      <div class="sl-right flex flex-col gap-4">
+
+        <!-- Value derivation -->
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-5">
+          <div class="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-4">Value Derivation</div>
+          <div class="space-y-2.5 text-xs text-slate-600 leading-relaxed">
+            <div class="flex items-start gap-2">
+              <span class="text-teal-600 font-bold mt-0.5">→</span>
+              <span>150 Rx × 8 min saved × <span class="bg-amber-100 text-amber-700 font-semibold px-1 rounded">$15/hr staff rate — adjust</span> = <strong class="text-slate-800">$300/week</strong></span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-teal-600 font-bold mt-0.5">→</span>
+              <span>15 batches × 5 min saved × <span class="bg-amber-100 text-amber-700 font-semibold px-1 rounded">$15/hr staff rate — adjust</span> = <strong class="text-slate-800">$18.75/week</strong></span>
+            </div>
+            <div class="border-t border-slate-200 pt-2.5 mt-2.5">
+              <div class="flex justify-between items-center">
+                <span class="font-semibold text-slate-700">Total value / week</span>
+                <span class="font-black text-teal-700 text-base">$318.75</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Annual value highlight -->
+        <div class="bg-teal-700 rounded-xl p-5 flex-1 flex flex-col justify-between">
+          <div>
+            <div class="text-teal-300 text-xs font-semibold uppercase tracking-widest mb-2">Projected Annual Value</div>
+            <div class="text-4xl font-black text-white">$16,575</div>
+            <div class="text-teal-300 text-xs mt-1">$318.75/week × 52 weeks</div>
+          </div>
+          <div class="mt-4">
+            <p class="text-teal-200 text-xs leading-relaxed">Staff time saved from manual record searches and spreadsheet stock checks — before factoring in expired stock losses prevented or liability reduction.</p>
+          </div>
+        </div>
+
+        <!-- Framing label -->
+        <div class="bg-amber-50 border border-amber-200 rounded-lg px-4 py-2.5 flex items-start gap-2">
+          <svg class="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <p class="text-xs text-amber-700 leading-relaxed"><strong>Projected impact — based on your inputs.</strong> Adjust the assumption chips above to reflect your actual daily volume and staff rate.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
